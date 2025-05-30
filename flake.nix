@@ -6,7 +6,7 @@
             typst = {
                 description = "A minimal typst project";
                 path = ./typst;
-            }
+            };
         };
     };
 }
