@@ -7,6 +7,9 @@
                 description = "A minimal julia project";
                 path = ./julia;
             };
+            rust = {
+                description = "A minimal rust project";
+            };
             typst = {
                 description = "A minimal typst project";
                 path = ./typst;
