@@ -16,9 +16,6 @@
                     python313
                     uv
                 ];
-
-                UV_PYTHON_DOWNLOADS = "never";
-                UV_PYTHON_EXECUTABLE = "${pkgs.python314}/bin/python3";
             };
         };
     };
