@@ -9,6 +9,7 @@
             };
             rust = {
                 description = "A minimal rust project";
+                path = ./rust;
             };
             typst = {
                 description = "A minimal typst project";
