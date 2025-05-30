@@ -21,10 +21,6 @@
                     typst
                 ];
 
-                shellHook = ''
-                    exec zsh
-                '';
-
                 TYPST_FONT_PATHS = builtins.concatStringsSep ":" fonts;
             };
         };
