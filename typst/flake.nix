@@ -21,7 +21,9 @@
                     typst
                 ];
 
-                TYPST_FONT_PATHS = builtins.concatStringsSep ":" fonts;
+                env = {
+                    TYPST_FONT_PATHS = builtins.concatStringsSep ":" fonts;
+                };
             };
         };
     };
