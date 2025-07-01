@@ -19,6 +19,10 @@
                 description = "A minimal typst project";
                 path = ./typst;
             };
+            hphi = {
+                description = "A minimal hphi project";
+                path = ./hphi;
+            }
         };
     };
 }
