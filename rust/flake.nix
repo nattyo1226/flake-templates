@@ -13,14 +13,23 @@
     }: flake-parts.lib.mkFlake { inherit inputs; } {
         systems = nixpkgs.lib.platforms.all;
         perSystem = { system, ... }: let
+            overlays = [ rust-overlay.overlays.default ];
             pkgs = import nixpkgs {
-                inherit system;
-                overlays = [ rust-overlay.overlays.default ];
+                inherit system overlays;
+            };
+            rustToolchain = pkgs.rust-bin.fromTustupToolchain {
+                channel = "stable";
+                components = [
+                    "clippy"
+                    "rustfmr"
+                    "rust-src"
+                ];
+                # targets = [];
             };
         in {
             devShells.default = pkgs.mkShell {
-                packages = with pkgs; [
-                    rust-bin.stable.latest.default
+                buildInputs = [
+                    rustToolchain
                 ];
             };
         };
