@@ -11,7 +11,7 @@
     }: flake-parts.lib.mkFlake { inherit inputs; } {
         systems = nixpkgs.lib.platforms.all;
         perSystem = { pkgs, ... }: let
-            hphi = pkgs.callPackage ./nix/hphi.nix {};
+            hphi = pkgs.callPackage ./hphi.nix {};
         in {
             devShells.default = pkgs.mkShell {
                 buildInputs =[
