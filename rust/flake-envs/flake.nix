@@ -17,11 +17,11 @@
             pkgs = import nixpkgs {
                 inherit system overlays;
             };
-            rustToolchain = pkgs.rust-bin.fromTustupToolchain {
+            rustToolchain = pkgs.rust-bin.fromRustupToolchain {
                 channel = "stable";
                 components = [
                     "clippy"
-                    "rustfmr"
+                    "rustfmt"
                     "rust-src"
                 ];
                 # targets = [];
