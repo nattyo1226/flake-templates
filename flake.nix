@@ -19,6 +19,10 @@
                 description = "A minimal LaTeX project";
                 path = ./latex;
             };
+            lean = {
+                description = "A minimal lean 4 project";
+                path = ./lean4;
+            };
             python = {
                 description = "A minimal python project with uv";
                 path = ./python;
