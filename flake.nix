@@ -19,7 +19,7 @@
                 description = "A minimal LaTeX project";
                 path = ./latex;
             };
-            lean = {
+            lean4 = {
                 description = "A minimal lean 4 project";
                 path = ./lean4;
             };
