@@ -12,7 +12,7 @@
         systems = nixpkgs.lib.platforms.all;
         perSystem = { pkgs, ... }: {
             devShells.default = pkgs.mkShell {
-                packages = with pkgs; [
+                buildInputs = with pkgs; [
                     texliveFull
                 ];
             };

@@ -12,7 +12,7 @@
         systems = nixpkgs.lib.platforms.all;
         perSystem = { pkgs, ... }: {
             devShells.default = pkgs.mkShell {
-                buildInput = with pkgs; [
+                buildInputs = with pkgs; [
                     lean4
                 ];
             };
