@@ -14,10 +14,11 @@
             hphi = pkgs.callPackage ./hphi.nix {};
         in {
             devShells.default = pkgs.mkShell {
-                buildInputs =[
+                buildInputs = [
                     hphi
                 ];
             };
         };
     };
 }
+
