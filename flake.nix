@@ -3,6 +3,10 @@
 
     outputs = { ... }: {
         templates = {
+            bun = {
+                description = "A minimal bun project";
+                path = ./bun;
+            };
             hphi = {
                 description = "A minimal hphi project";
                 path = ./hphi;
