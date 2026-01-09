@@ -15,6 +15,10 @@
                 description = "A minimal julia project";
                 path = ./julia;
             };
+            nodejs = {
+                description = "A minimal nodejs project";
+                path = ./nodejs;
+            };
             rust = {
                 description = "A minimal rust project";
                 path = ./rust;

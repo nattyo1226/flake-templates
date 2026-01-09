@@ -1,0 +1,21 @@
+{
+    inputs = {
+        nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.11";
+        flake-parts.url = "github:hercules-ci/flake-parts";
+    };
+
+    outputs = inputs@{
+        nixpkgs,
+        flake-parts,
+        ...
+    }: flake-parts.lib.mkFlake { inherit inputs; } {
+        systems = nixpkgs.lib.platforms.all;
+        perSystem = { pkgs, ... }: {
+            devShells.default = pkgs.mkShell {
+                buildInputs = with pkgs; [
+                    nodejs_24
+                ];
+            };
+        };
+    };
+}
