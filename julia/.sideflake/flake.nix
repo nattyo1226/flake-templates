@@ -13,7 +13,7 @@
         perSystem = { pkgs, ... }: {
             devShells.default = pkgs.mkShell {
                 buildInputs = with pkgs; [
-                    julia-bin
+                    julia_111-bin
                 ];
             };
         };
