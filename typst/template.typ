@@ -2,7 +2,9 @@
 #let Shironezu = rgb("#dcdddd")
 
 #let project(
-  title: "",
+  title: [],
+  subtitle: [],
+  affiliations: (),
   authors: (),
   date: datetime.today(),
   table-of-contents: true,
@@ -38,7 +40,7 @@
   )
 
   show math.equation: set text(font: ("New Computer Modern Math", "Source Han Serif"))
-  
+
   show link: set text(fill: Sabiasagi)
 
   set list(
@@ -51,9 +53,17 @@
 
   align(center)[
     #text(16pt)[#title]
-    
+    #if subtitle != () {
+      linebreak()
+      text(12pt)[#subtitle]
+    }
+    #v(6pt)
+    #if affiliations != () {
+      text(12pt)[#affiliations]
+      linebreak()
+    }
     #text(12pt)[#authors]
-    
+    #v(6pt)
     #text(12pt)[#date.display()]
   ]
 
