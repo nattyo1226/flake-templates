@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
@@ -24,7 +24,6 @@
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
               tinymist
-              typst
               typstyle
             ];
 
